@@ -4,6 +4,7 @@ class Program:
         self.year = year
 
 
+
 class Movie:
     def __init__(self, name, year, duration):
         self.__name = name.title()
@@ -28,8 +29,9 @@ class Movie:
 
 
 
+
 class Serie:
-    def __index__(self, name, year, seasons):
+    def __init__(self, name, year, seasons):
         self.__name = name.title()
         self.year = year
         self.seasons = seasons
@@ -52,9 +54,8 @@ class Serie:
 
 
 
-avengers = Movie('avengers - infinity war, 2018, 160')
-print(avengers.name)
+avengers = Movie('avengers - infinity war', 2018, 160)
+print(f"Name: {avengers.name} - Year: {avengers.year} - Duration: {avengers.duration}")
 
-
-ricky = Serie('ricky and morty, 2018, 4')
+ricky = Serie ('Ricky and Morty', 2018, 4)
 print(f"Name: {ricky.name} - Year: {ricky.year} - Seasons: {ricky.seasons}")
