@@ -36,7 +36,14 @@ class Serie(Program):
 
 
 avengers = Movie('avengers - infinity war', 2018, 160)
-print(f"Name: {avengers.name} - Year: {avengers.year} - Duration: {avengers.duration}")
-
 ricky = Serie ('Ricky and Morty', 2018, 4)
-print(f"Name: {ricky.name} - Year: {ricky.year} - Seasons: {ricky.seasons}")
+
+avengers.give_likes()
+avengers.give_likes()
+avengers.give_likes()
+
+ricky.give_likes()
+ricky.give_likes()
+
+print(f'Nome: {avengers.name} - Likes: {avengers.likes}')
+print(f'Nome: {ricky.name} - Likes: {ricky.likes}')
