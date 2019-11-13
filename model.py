@@ -19,11 +19,17 @@ class Program:
     def name(self, new_name):
         self._name = new_name
 
+    def __str__(self):
+        return f'Nome: {self.name} - Likes: {self.likes}'
+
 
 class Movie(Program):
     def __init__(self, name, year, duration):
         super().__init__(name, year)
         self.duration = duration
+
+    def __str__(self):
+        return f'Nome: {self.name} - {self.duration} - Likes: {self.likes}'
 
 
 
@@ -31,6 +37,9 @@ class Serie(Program):
     def __init__(self, name, year, seasons):
         super().__init__(name, year)
         self.seasons = seasons
+
+    def __str__(self):
+        return f'Nome: {self.name} - {self.seasons} - Likes: {self.likes}'
 
 
 
@@ -45,5 +54,7 @@ avengers.give_likes()
 ricky.give_likes()
 ricky.give_likes()
 
-print(f'Nome: {avengers.name} - Likes: {avengers.likes}')
-print(f'Nome: {ricky.name} - Likes: {ricky.likes}')
+movies_and_series = {avengers, ricky}
+
+for program in movies_and_series:
+    print(program)
